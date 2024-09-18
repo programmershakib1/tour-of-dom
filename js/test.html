@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body id="container">
+    <section>
+        <h1>My Book List</h1>
+        <ul>
+            <li id="book1" class="book">Bangla</li>
+            <li class="book">English</li>
+            <li class="book">Math</li>
+            <li class="all">philosophy</li>
+            <li class="all">Biology</li>
+            <li class="all">botany</li>
+        </ul>
+    </section>
+    <script>
+        const li = document.getElementsByTagName('li');
+        // console.log(li)
+        for(const singleLi of li){
+            singleLi.style.color = 'tomato'
+        }
+
+        const book = document.getElementsByClassName('book');
+        for(const singlebook of book){
+            singlebook.style.color = 'green'
+        }
+        const books = document.getElementById('book1');
+        books.style.color = 'pink'
+
+        const query = document.querySelector('li');
+        query.style.backgroundColor = 'yellow'
+
+        const queryall = document.querySelectorAll('.all');
+        // console.log(queryall)
+
+
+        const container = document.getElementById('container');
+        
+        const section = document.createElement('section');
+
+        const h1 = document.createElement('h1');
+        h1.innerText = 'Food List';
+        section.appendChild(h1);
+
+        const ul = document.createElement('ul');
+        section.appendChild(ul);
+        const li1 = document.createElement('li');
+        li1.innerText = 'apple';
+        ul.appendChild(li1);
+        const li2 = document.createElement('li');
+        li2.innerText = 'banana';
+        ul.appendChild(li2);
+        const li3 = document.createElement('li');
+        li3.innerText = 'mango';
+        ul.appendChild(li3);
+        const li4 = document.createElement('li');
+        li4.innerText = 'orange';
+        ul.appendChild(li4);
+        container.appendChild(section);
+
+        const containers = document.getElementById('container');
+        const drees = document.createElement('section');
+        drees.innerHTML = `
+        <h1>My Dress section</h1>
+          <ul>
+            <li>T-shirt</li>
+            <li>Lungi</li>
+            <li>Sando gengi</li>
+          </ul>
+        `
+        containers.appendChild(drees)
+    </script>
+</body>
+</html>
